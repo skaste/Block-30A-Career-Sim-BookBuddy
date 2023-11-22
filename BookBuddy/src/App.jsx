@@ -18,12 +18,14 @@ const App = () => {
     setPage("list");
   };
 
+  //link into the router and routes
   return (
     <>
       <div id="main-section">
         <div id="navbar">
           <div>Book Buddy Library</div>
           <BookList/>
+          {/* <BookDetails/> */}
         </div>
 
         {/* <Routes>
