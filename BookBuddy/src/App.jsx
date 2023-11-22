@@ -1,9 +1,17 @@
-import { useState } from 'react'
-import {Route, Routes} from "react-router-dom";
-import './App.css'
+import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import React from "react";
 
-function App() {
+const App = () => {
+  return (
+    <div id="main-section">
+      <div id="navbar">
+        <div>App</div>
+      </div>
 
-}
-
-export default App
+      
+    </div>
+  );
+};
+export default App;
