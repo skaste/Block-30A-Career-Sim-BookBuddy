@@ -7,6 +7,7 @@ const SignUpForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const [token, setToken] = useState("");
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -30,7 +31,7 @@ const SignUpForm = () => {
       );
       const result = await response.json();
       console.log(result);
-      setToken(result);
+      setToken(result.token);
       // .then((response) => response.json())
       // .then((result) => {
       //   console.log(result);
