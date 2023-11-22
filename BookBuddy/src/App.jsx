@@ -24,8 +24,12 @@ const App = () => {
       <div id="main-section">
         <div id="navbar">
           <div>Book Buddy Library</div>
-          <Link to="/books">BookList</Link>
-          <Link to="/register">Register</Link>
+          <Link id="links" to="/books">
+            BookList
+          </Link>
+          <Link id="links" to="/register">
+            Register
+          </Link>
 
           {/* <BookDetails/> */}
         </div>

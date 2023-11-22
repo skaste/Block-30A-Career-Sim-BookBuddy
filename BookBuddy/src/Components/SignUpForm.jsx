@@ -11,7 +11,6 @@ const SignUpForm = () => {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    // console.log("testing");
 
     try {
       const response = await fetch(
@@ -32,11 +31,6 @@ const SignUpForm = () => {
       const result = await response.json();
       console.log(result);
       setToken(result.token);
-      // .then((response) => response.json())
-      // .then((result) => {
-      //   console.log(result);
-      // })
-      // .catch(console.error);
     } catch (error) {
       console.error(error);
     }

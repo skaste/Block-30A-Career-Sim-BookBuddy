@@ -4,4 +4,13 @@
   padding: 2rem;
   text-align: center;
 }
+#signUpButton {
+  background-color: grey;
+  color:aquamarine;
+}
+#links {
+  padding:5px;
+  margin:5px;
+  border:none;
+}
 

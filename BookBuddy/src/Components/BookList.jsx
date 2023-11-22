@@ -11,9 +11,9 @@ const BookList = () => {
         const response = await fetch(
           "https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/books"
         );
-        console.log(response);
+        // console.log(response);
         const results = await response.json();
-        console.log(results);
+        // console.log(results);
         // const allBooksList = results.books;
         setAllBooksList(results.books);
         // console.log("all Books:", allBooks);
