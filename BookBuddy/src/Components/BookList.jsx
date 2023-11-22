@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-
-const BookList = ({ handleBookClick }) => {
+import { Link } from "react-router-dom";
+const BookList = () => {
   //List all the books
   const [allBooksList, setAllBooksList] = useState([]);
 
@@ -26,11 +26,22 @@ const BookList = ({ handleBookClick }) => {
 
   return (
     <>
-      <div>BookList</div>
+      <h2>BookList</h2>
       {allBooksList.map((singleBook) => (
-        <div key={singleBook.id} onClick={() => handleBookClick(singleBook)}>
-          {singleBook.title}
-        </div>
+        <Link
+          to={`/books/${singleBook.id}`}
+          key={singleBook.id}
+          className="book-link"
+        >
+          <div className="book-card">
+            <div>
+              <h3>{singleBook.title}</h3>
+              <p>{singleBook.author}</p>
+              <p>{singleBook.description}</p>
+              <p>{singleBook.available ? "Available" : "Not Available"}</p>
+            </div>
+          </div>
+        </Link>
       ))}
     </>
   );
