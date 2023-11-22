@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const BookList = ({}) => {
+const [allBooksList, setAllBooksList]=useState([]);
 
 useEffect(() => {
   const getBooks =async () => {
@@ -11,8 +12,8 @@ useEffect(() => {
       console.log(response);
       const results = await response.json();
       console.log(results);
-      const allBooks = results.books.title;
-      console.log("all Books:", allBooks);
+      const allBooks = results.books;
+      // console.log("all Books:", allBooks);
     } catch (error){
       console.error("Error fetching book list:", error);
     }
@@ -21,7 +22,13 @@ useEffect(() => {
 }, []);
 
   return (
+
+    <>
     <div>BookList</div>
+    {allBooksList.map((singleBook)=>(
+      <p>{singleBook.name}</p>
+    ))}
+    </>
   )
 }
 export default BookList
