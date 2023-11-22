@@ -4,10 +4,12 @@ import "./App.css";
 import React from "react";
 import BookList from "./Components/BookList";
 import BookDetails from "./Components/BookDetails";
+import SignUpForm from "./Components/SignUpForm";
 
 
 const App = () => {
   //track page and list
+  //create signup form
   const [page, setPage] = useState("list");
  
 //need click handler for when book is clicked sets to "active book details"
@@ -18,6 +20,8 @@ const App = () => {
     setPage("list");
   };
 
+
+
   //link into the router and routes
   return (
     <>
@@ -25,6 +29,7 @@ const App = () => {
         <div id="navbar">
           <div>Book Buddy Library</div>
           <BookList/>
+          
           {/* <BookDetails/> */}
         </div>
 
@@ -33,7 +38,7 @@ const App = () => {
       </Routes> */}
       </div>
 
-
+      <SignUpForm/>
 
 
     </>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const BookList = ({handleBookClick}) => {
+const BookList = ({ handleBookClick }) => {
   //List all the books
   const [allBooksList, setAllBooksList] = useState([]);
 
@@ -14,7 +14,8 @@ const BookList = ({handleBookClick}) => {
         console.log(response);
         const results = await response.json();
         console.log(results);
-        const allBooks = results.books;
+        // const allBooksList = results.books;
+        setAllBooksList(results.books);
         // console.log("all Books:", allBooks);
       } catch (error) {
         console.error("Error fetching book list:", error);
@@ -29,7 +30,6 @@ const BookList = ({handleBookClick}) => {
       {allBooksList.map((singleBook) => (
         <div key={singleBook.id} onClick={() => handleBookClick(singleBook)}>
           {singleBook.title}
-          
         </div>
       ))}
     </>
