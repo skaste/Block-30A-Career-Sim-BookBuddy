@@ -10,7 +10,9 @@ useEffect(() => {
       );
       console.log(response);
       const results = await response.json();
-      
+      console.log(results);
+      const allBooks = results.books.title;
+      console.log("all Books:", allBooks);
     } catch (error){
       console.error("Error fetching book list:", error);
     }
