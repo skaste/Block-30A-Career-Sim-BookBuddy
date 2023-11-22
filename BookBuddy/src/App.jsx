@@ -37,7 +37,7 @@ const App = () => {
         </Routes>
       </div>
 
-      <SignUpForm />
+      {/* <SignUpForm /> */}
     </>
   );
 };

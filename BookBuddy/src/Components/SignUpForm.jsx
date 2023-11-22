@@ -50,28 +50,28 @@ const SignUpForm = () => {
           Firstname:{""}
           <input
             value={firstName}
-            onChange={() => setFirstName(e.target.value)}
+            onChange={(e) => setFirstName(e.target.value)}
           ></input>
         </label>
         <label>
           Lastname:{""}
           <input
             value={lastName}
-            onChange={() => setLastName(e.target.value)}
+            onChange={(e) => setLastName(e.target.value)}
           ></input>
         </label>
         <label>
           Email:{""}
           <input
             value={email}
-            onChange={() => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           ></input>
         </label>
         <label>
           Password:{""}
           <input
             value={password}
-            onChange={() => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
           ></input>
         </label>
         <button id="signUpButton">Register!</button>
