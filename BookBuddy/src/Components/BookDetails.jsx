@@ -2,16 +2,17 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
 const BookDetails = () => {
-  const { id } = useParams();
-  const [bookDetails, setBookDetails] = useState(null);
+  const { bookId } = useParams();
+  console.log(useParams());
+  const [bookDetails, setBookDetails] = useState(false);
 
   useEffect(() => {
     const getBookDetails = async () => {
       try {
         const response = await fetch(
-          `https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/books/${id}`
+          `https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/books/${bookId}`
         );
-
+        console.log(response);
         if (!response.ok) {
           throw new Error(`Failed to get book details: ${response.statusText}`);
         }
@@ -24,7 +25,7 @@ const BookDetails = () => {
     };
 
     getBookDetails();
-  }, [id]);
+  }, [bookId]);
 
   return (
     <div>

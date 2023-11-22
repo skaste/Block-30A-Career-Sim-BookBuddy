@@ -36,9 +36,14 @@ const BookList = () => {
           <div className="book-card">
             <div>
               <h3>{singleBook.title}</h3>
+              <img
+                src={singleBook.coverimage}
+                alt={singleBook.title}
+                style={{ width: "100px", height: "100px" }}
+              />
               <p>{singleBook.author}</p>
-              <p>{singleBook.description}</p>
-              <p>{singleBook.available ? "Available" : "Not Available"}</p>
+              {/* <p>{singleBook.description}</p> */}
+              {/* <p>{singleBook.available ? "Available" : "Not Available"}</p> */}
             </div>
           </div>
         </Link>

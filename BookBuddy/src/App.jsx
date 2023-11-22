@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 import React from "react";
 import BookList from "./Components/BookList";
@@ -25,12 +25,15 @@ const App = () => {
         <div id="navbar">
           <div>Book Buddy Library</div>
           <Link to="/books">BookList</Link>
+          <Link to="/register">Register</Link>
 
           {/* <BookDetails/> */}
         </div>
 
         <Routes>
           <Route path="/books" element={<BookList />} />
+          <Route path="/books/:bookId" element={<BookDetails />} />
+          <Route path="/register" element={<SignUpForm />} />
         </Routes>
       </div>
 
