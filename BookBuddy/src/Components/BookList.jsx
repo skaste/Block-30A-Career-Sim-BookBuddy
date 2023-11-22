@@ -3,12 +3,14 @@ import React, { useEffect } from 'react'
 const BookList = ({}) => {
 
 useEffect(() => {
-  const getBooks = () => {
+  const getBooks =async () => {
     try {
-      const response = fetch(
+      const response = await fetch(
         'https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/books'
       );
-      console.log(resposne);
+      console.log(response);
+      const results = await response.json();
+      
     } catch (error){
       console.error("Error fetching book list:", error);
     }
