@@ -8,9 +8,12 @@ useEffect(() => {
       const response = fetch(
 
       );
+    } catch (error){
+      console.error("Error fetching book list:", error);
     }
   }
-})
+  getBooks();
+}, []);
 
   return (
     <div>BookList</div>
