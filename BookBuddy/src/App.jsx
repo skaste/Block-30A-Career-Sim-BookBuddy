@@ -1,22 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 import React from "react";
 import BookList from "./Components/BookList";
 import BookDetails from "./Components/BookDetails";
 import SignUpForm from "./Components/SignUpForm";
+import Login from "./Components/Login";
 
 const App = () => {
-  //track page and list
-  //create signup form
-  // const [page, setPage] = useState("list");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  //need click handler for when book is clicked sets to "active book details"
-
-  //go to list of books
-  // const goToList = () => {
-  //   setPage("list");
-  // };
+  useEffect(() => {
+    //check if the user is logged in by validating the token stored is session storage
+    const token = sessionStorage.getItem("token");
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
 
   //link into the router and routes
   return (
@@ -30,6 +30,9 @@ const App = () => {
           <Link id="links" to="/register">
             Register
           </Link>
+          <link id="link" to="/login">
+            Login
+          </link>
 
           {/* <BookDetails/> */}
         </div>
@@ -38,6 +41,10 @@ const App = () => {
           <Route path="/books" element={<BookList />} />
           <Route path="/books/:bookId" element={<BookDetails />} />
           <Route path="/register" element={<SignUpForm />} />
+          <Route
+            path="/login"
+            element={<Login setIsLoggedIn={setIsLoggedIn} />}
+          />
         </Routes>
       </div>
 
