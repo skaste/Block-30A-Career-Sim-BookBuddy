@@ -30,7 +30,7 @@ const App = () => {
           <Link id="links" to="/register">
             Register
           </Link>
-          <Link id="link" to="/login">
+          <Link id="links" to="/login">
             Login
           </Link>
 
