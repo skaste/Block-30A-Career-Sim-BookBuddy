@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const SignUpForm = () => {
+const SignUpForm = (setIsLoggedIn) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");

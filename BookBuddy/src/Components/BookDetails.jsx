@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 
 const BookDetails = () => {
   const { bookId } = useParams();
-  console.log(useParams());
+  // console.log(useParams());
   const [bookDetails, setBookDetails] = useState(false);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ const BookDetails = () => {
         const response = await fetch(
           `https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/books/${bookId}`
         );
-        console.log(response);
+        // console.log(response);
         if (!response.ok) {
           throw new Error(`Failed to get book details: ${response.statusText}`);
         }

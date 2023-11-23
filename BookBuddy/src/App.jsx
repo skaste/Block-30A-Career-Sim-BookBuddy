@@ -30,9 +30,9 @@ const App = () => {
           <Link id="links" to="/register">
             Register
           </Link>
-          <link id="link" to="/login">
+          <Link id="link" to="/login">
             Login
-          </link>
+          </Link>
 
           {/* <BookDetails/> */}
         </div>
