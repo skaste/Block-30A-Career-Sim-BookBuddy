@@ -30,7 +30,8 @@ const SignUpForm = () => {
       );
       const result = await response.json();
       console.log(result);
-      setToken(result.token);
+      sessionStorage.setToken("token", result.token);
+      setIsLoggedIn(true);
     } catch (error) {
       console.error(error);
     }
@@ -38,12 +39,13 @@ const SignUpForm = () => {
 
   return (
     <>
-      <h2>Sign Up!</h2>
+      <h2>Register!</h2>
       {error && <p>{error}</p>}
       <form onSubmit={handleSubmit}>
         <label>
           Firstname:{""}
           <input
+            type="text"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
           ></input>
@@ -51,6 +53,7 @@ const SignUpForm = () => {
         <label>
           Lastname:{""}
           <input
+            type="text"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
           ></input>
@@ -58,6 +61,7 @@ const SignUpForm = () => {
         <label>
           Email:{""}
           <input
+            type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></input>
@@ -65,6 +69,7 @@ const SignUpForm = () => {
         <label>
           Password:{""}
           <input
+            type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></input>
