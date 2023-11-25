@@ -25,9 +25,9 @@ const Login = ({ setIsLoggedIn }) => {
 
   return (
     <>
-      <h2>Login</h2>
+      <h2 id="login">Login</h2>
       <div>
-        <label>Email:</label>
+        <label id="direction">Email:</label>
         <input
           type="email"
           value={email}
@@ -35,7 +35,7 @@ const Login = ({ setIsLoggedIn }) => {
         />
       </div>
       <div>
-        <label>Password:</label>
+        <label id="direction">Password:</label>
         <input
           type="password"
           value={password}

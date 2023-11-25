@@ -14,4 +14,19 @@
   border:none;
   color:aquamarine;
 }
-
+#direction{
+color:aquamarine;
+text-align: center;
+}
+#login{
+color:coral;
+}
+button{
+  background-color: aquamarine;
+  color:coral;
+}
+#title{
+  color:coral;
+  font-size: 35px;
+  font-weight: bold;
+}

@@ -23,7 +23,7 @@ const App = () => {
     <>
       <div id="main-section">
         <div id="navbar">
-          <div>Book Buddy Library</div>
+          <div id="title">Book Buddy Library</div>
           <Link id="links" to="/books">
             BookList
           </Link>
