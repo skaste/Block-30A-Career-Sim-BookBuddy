@@ -25,25 +25,27 @@ const Login = ({ setIsLoggedIn }) => {
 
   return (
     <>
-      <h2 id="login">Login</h2>
-      <div>
-        <label id="direction">Email:</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </div>
-      <div>
-        <label id="direction">Password:</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-      <div>
-        <button onClick={handleLogin}>Login</button>
+      <div className="formBox">
+        <h2 id="login">Login</h2>
+        <div>
+          <label id="direction">Email:</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div>
+          <label id="direction">Password:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <div>
+          <button onClick={handleLogin}>Login</button>
+        </div>
       </div>
     </>
   );
