@@ -46,6 +46,12 @@ const App = () => {
             element={<Login setIsLoggedIn={setIsLoggedIn} />}
           />
         </Routes>
+
+        <p>
+          Book Buddy is your local library and requires registration to reserve
+          books that are to be checked out. Please be patient as this site is
+          currently going through upgrades.
+        </p>
       </div>
 
       {/* <SignUpForm /> */}
