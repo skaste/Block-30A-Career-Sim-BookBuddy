@@ -6,6 +6,7 @@ import BookList from "./Components/BookList";
 import BookDetails from "./Components/BookDetails";
 import SignUpForm from "./Components/SignUpForm";
 import Login from "./Components/Login";
+import Account from "./Components/Account";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -24,6 +25,9 @@ const App = () => {
       <div id="main-section">
         <div id="navbar">
           <div id="title">Book Buddy Library</div>
+          <Link id="links" to="/account">
+            My Account
+          </Link>
           <Link id="links" to="/books">
             BookList
           </Link>
@@ -45,6 +49,7 @@ const App = () => {
             path="/login"
             element={<Login setIsLoggedIn={setIsLoggedIn} />}
           />
+          <Route path="/account" element={<Account />} />
         </Routes>
 
         <p>
