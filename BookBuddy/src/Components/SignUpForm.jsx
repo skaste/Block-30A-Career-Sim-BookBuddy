@@ -39,43 +39,45 @@ const SignUpForm = (setIsLoggedIn) => {
 
   return (
     <>
-      <h2>Register!</h2>
-      {error && <p>{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <label>
-          Firstname:{""}
-          <input
-            type="text"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-          ></input>
-        </label>
-        <label>
-          Lastname:{""}
-          <input
-            type="text"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-          ></input>
-        </label>
-        <label>
-          Email:{""}
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></input>
-        </label>
-        <label>
-          Password:{""}
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          ></input>
-        </label>
-        <button id="signUpButton">Register!</button>
-      </form>
+      <div className="formBox">
+        <h2 id="RegisterHead">Register!</h2>
+        {error && <p>{error}</p>}
+        <form onSubmit={handleSubmit}>
+          <label id="formLabel">
+            Firstname:{""}
+            <input
+              type="text"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            ></input>
+          </label>
+          <label id="formLabel">
+            Lastname:{""}
+            <input
+              type="text"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            ></input>
+          </label>
+          <label id="formLabel">
+            Email:{""}
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            ></input>
+          </label>
+          <label id="formLabel">
+            Password:{""}
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            ></input>
+          </label>
+          <button id="signUpButton">Register!</button>
+        </form>
+      </div>
     </>
   );
 };

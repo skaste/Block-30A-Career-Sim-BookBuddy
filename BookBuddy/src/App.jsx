@@ -7,6 +7,7 @@ import BookDetails from "./Components/BookDetails";
 import SignUpForm from "./Components/SignUpForm";
 import Login from "./Components/Login";
 import Account from "./Components/Account";
+import "./Components/Form.css";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
