@@ -7,6 +7,8 @@
 .formBox{
   min-width: 100%;
   height: 55vh;
+  /* background-color: lightgrey; */
+  border-radius: 5px;
   border:dotted aquamarine 2vw;
   margin: 0vw;
   padding: 5vw;
